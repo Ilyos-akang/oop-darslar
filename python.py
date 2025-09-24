@@ -107,3 +107,42 @@ car1.info()
 
 car2=Car("malibu","25.000$","qora",220)
 car2.info()
+
+
+class Telefon:
+    def __init__(self,telefon_nomi):
+        self.telefon_nomi=telefon_nomi
+        self.batareka=100
+        self.balanse=50
+
+    def yoqish(self):
+        self.batareka-=5
+        print(f"{self.telefon_nomi} ")
+
+    def ochirish(self):
+        print(f"telefon o'chirildi")
+
+    def qongiroq(self):
+        self.balanse-=3
+        print(f"qo'ng'iroq qilinmoqda ")
+
+    def xabar(self,matn):
+        self.matn=matn
+        self.balanse-=2
+        print(f"{self.matn} xabari yuborildi")
+
+    def info(self):
+        print(f"balans: {self.balanse}, batareka holati {self.batareka}")
+        
+
+asd=Telefon("samsung")
+
+asd.info()
+asd.yoqish()
+asd.info()
+asd.xabar("salom")
+asd.info()
+asd.qongiroq()
+asd.info()
+asd.ochirish()
+asd.info()
